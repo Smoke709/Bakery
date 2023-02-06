@@ -1,0 +1,64 @@
+.footer-section{
+    background-color: $merino;
+    .footer-contents{
+        padding: 70px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        >ul{
+            border: 1px solid $border-color;
+            border-left: 0;
+            border-right: 0;
+            padding: 30px 40px;
+         
+            li{
+                margin: 0 40px 0 0;
+                color: $fuscous-grey;
+                &:last-child{
+                    margin-right: 0;
+                }
+                a{
+                    color: $fuscous-grey;
+                    text-transform: uppercase;
+                    text-decoration:none;
+                    &:hover{
+                        color: $desert-sand;
+                    }
+                }
+            }
+        }
+        @include breakpoint (customwide){
+            flex-direction: column;
+            .footer-menu{
+                width: 100%;
+                justify-content: center;
+                margin: 20px 0;
+                &:first-child{
+                    margin-top: 0;
+                }
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        @include breakpoint (smaller){
+            .footer-menu{
+                flex-direction: column;
+
+                li{
+                    margin: 0 0 15px;
+                    text-align: center;
+                    
+                }
+            }
+        }
+
+        @include breakpoint (smaller){
+            padding-top: 30px;
+        }
+
+    }
+}
